@@ -43,14 +43,29 @@ export class BlogComponent {
 
 
   guardar(){
-    this.arrFormulario.push(this.newArticulo);
-    this.newArticulo = {
-    'titulo': "",
-    'imagen': "",
-    'texto': "",
-    'fecha': ""
+    // Verificar que todos los campos estén llenos
+    if (this.camposValidos()) {
+      this.arrFormulario.push(this.newArticulo);
+      this.newArticulo = {
+        'titulo': "",
+        'imagen': "",
+        'texto': "",
+        'fecha': ""
+      }
+      console.log(this.arrFormulario)
+    } else {
+      alert("Por favor, complete todos los campos.");
     }
-    console.log(this.arrFormulario)
+  }
+
+  // Función para validar si todos los campos están llenos
+  camposValidos(): boolean {
+    return (
+      this.newArticulo.titulo.trim() !== "" &&
+      this.newArticulo.imagen.trim() !== "" &&
+      this.newArticulo.texto.trim() !== "" &&
+      this.newArticulo.fecha.trim() !== ""
+    );
   }
 
   cargarDatos(): string {
