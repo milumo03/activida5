@@ -21,6 +21,27 @@ export class BlogComponent {
     'fecha': ""
   }
 
+
+
+  constructor() {}
+
+  ngOnInit() {
+    // Inicializar con dos artículos
+    this.arrFormulario.push({
+      'titulo': "Artículo 1",
+      'imagen': "https://ejemplo.com/imagen1.jpg",
+      'texto': "Texto del artículo 1",
+      'fecha': "2024-02-02"
+    });
+    this.arrFormulario.push({
+      'titulo': "Artículo 2",
+      'imagen': "https://ejemplo.com/imagen2.jpg",
+      'texto': "Texto del artículo 2",
+      'fecha': "2024-02-02"
+    });
+  }
+
+
   guardar(){
     this.arrFormulario.push(this.newArticulo);
     this.newArticulo = {
