@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { style } from '@angular/animations';
+import { CommonModule } from '@angular/common';
+import { Component, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
@@ -68,11 +70,8 @@ export class BlogComponent {
     );
   }
 
-  cargarDatos(): string {
-    let html: string = "";
-    this.arrFormulario.forEach((element: any) => {
-      html += `<p>${element.titulo} - ${element.imagen} - ${element.texto} - ${element.fecha}</p>`
-    })
-    return html
+  cargarDatos(): void {
+    this.arrFormulario = [];
   }
+  
 }

@@ -1,27 +1,33 @@
-<section>
-    <div> <!-- Capturar Datos -->
-        <!-- Meter las Clases para CSS!!! -->
-        <!-- No funciona "required", REVISAR!!! -->
-        <div class="form">
-            <label for="titulo">Título</label>
-            <input type="text" id="titulo" class="form-control" placeholder="Introduce el Título del Artículo " [(ngModel)]="newArticulo.titulo">
+<div class="wrapper">
+    <section class="blog">
+        <div class="form"> <!-- Capturar Datos -->
+            <!-- Meter las Clases para CSS!!! -->
+            <!-- No funciona "required", REVISAR!!! -->
+            <div class="element grupo">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" class="form-control" placeholder="Introduce el Título del Artículo " [(ngModel)]="newArticulo.titulo">
+            </div>
+            <div class="element grupo">
+                <label for="imagen">URL de la Imagen:</label>
+                <input type="text" id="imagen" placeholder="URL de la Imagen" [(ngModel)]="newArticulo.imagen">
+            </div>
+            <div class="element grupo">
+                <label for="texto">Texto de la Noticia:</label>
+                <textarea id="texto" rows="4" placeholder="Introduce el Texto del Artículo" [(ngModel)]="newArticulo.texto"></textarea>
+            </div>
+            <div class="element grupo">
+                <label for="fecha">Fecha de Publicación:</label>
+                <input type="date" id="fecha" [(ngModel)]="newArticulo.fecha">
+            </div>
+            <button (click)="guardar()" class="boton">Guardar</button>
         </div>
-        <div>
-            <label for="imagen">URL de la Imagen:</label>
-            <input type="text" id="imagen" placeholder="URL de la Imagen" [(ngModel)]="newArticulo.imagen">
-        </div>
-        <div>
-            <label for="texto">Texto de la Noticia:</label>
-            <textarea id="texto" rows="3" placeholder="Introduce el Texto del Artículo" [(ngModel)]="newArticulo.texto"></textarea>
-        </div>
-        <div>
-            <label for="fecha">Fecha de Publicación:</label>
-            <input type="date" id="fecha" [(ngModel)]="newArticulo.fecha">
-        </div>
-        <button (click)="guardar()">Guardar</button>
-    </div>
-    <hr>
-    <div [innerHTML]="cargarDatos()"> <!-- Pintar Datos-->
-
-    </div>
-</section>
+        <div class="visor">
+            <div *ngFor="let element of arrFormulario" class="articulo">
+              <p class="ficha">{{ element.titulo }}</p>
+              <p class="ficha">{{ element.imagen }}</p>
+              <p class="ficha">{{ element.texto }}</p>
+              <p class="ficha">{{ element.fecha }}</p>
+            </div>
+          </div>
+    </section>
+</div>
