@@ -43,6 +43,10 @@
 .articulo{
     padding: 10px;
     border: 1px solid;
+    border-color: rgb(170, 168, 168);
+    border-left: none;
+    border-right: none;
+    border-top: none;
     max-width: 100%;
     overflow: none;
 }
