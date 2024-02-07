@@ -2,6 +2,7 @@ import { style } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { IFormulario } from '../../interfaces/iformulario.interface';
 
 @Component({
   selector: 'app-blog',
@@ -12,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class BlogComponent {
   //Importamos la libreria FormsModulo y la directiva ngModel para poder usar el Two Way Data Biding
-  arrFormulario: any[] = [
+  arrFormulario: IFormulario[] = [
    // {'titulo': 'Título', 'imagen': 'URL Imagen', 'texto': 'Texto', 'fecha': Date}
   ]
 
@@ -71,7 +72,7 @@ export class BlogComponent {
   }
 
   cargarDatos(): void {
-    this.arrFormulario = [];
+    this.arrFormulario = []; 
   }
   
 }
