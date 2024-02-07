@@ -1,15 +1,13 @@
 <div class="wrapper">
     <section class="blog">
         <div class="form"> <!-- Capturar Datos -->
-            <!-- Meter las Clases para CSS!!! -->
-            <!-- No funciona "required", REVISAR!!! -->
             <div class="element grupo">
                 <label for="titulo">Título</label>
                 <input type="text" id="titulo" class="form-control" placeholder="Introduce el Título del Artículo " [(ngModel)]="newArticulo.titulo">
             </div>
             <div class="element grupo">
                 <label for="imagen">URL de la Imagen:</label>
-                <input type="text" id="imagen" placeholder="URL de la Imagen" [(ngModel)]="newArticulo.imagen">
+                <input type="text" id="imagen" placeholder="https://ejemplo.com/imagen1.jpg" [(ngModel)]="newArticulo.imagen">
             </div>
             <div class="element grupo">
                 <label for="texto">Texto de la Noticia:</label>

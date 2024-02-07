@@ -42,13 +42,12 @@
 
 .articulo{
     padding: 10px;
-    border: 1px solid;
-    border-color: rgb(170, 168, 168);
-    border-left: none;
-    border-right: none;
-    border-top: none;
     max-width: 100%;
     overflow: none;
+    background-color: rgba(206, 206, 206, 0.694);
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
 }
 
 .boton{
@@ -70,8 +69,12 @@ input, textarea{
     color:#7f7f7f;
     width: 100%;
     border:none;
+    border-radius: 5px;
+    background-color: rgba(206, 206, 206, 0.178);
     border-bottom: 1px solid;
     font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
     resize: none;
 
 }
+
