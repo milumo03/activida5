@@ -17,7 +17,7 @@ export class BlogComponent {
    // {'titulo': 'Título', 'imagen': 'URL Imagen', 'texto': 'Texto', 'fecha': Date}
   ]
 
-  newArticulo: any = {
+  newArticulo: IFormulario = {
     'titulo': "",
     'imagen': "",
     'texto': "",
@@ -71,8 +71,12 @@ export class BlogComponent {
     );
   }
 
-  cargarDatos(): void {
-    this.arrFormulario = []; 
+  cargarDatos(): string {
+    let html: string = "";
+    this.arrFormulario.forEach((element: any) => {
+      html += `<div class="articulo"><p>${element.titulo}</p><p>${element.imagen}</p><p>${element.texto}</p><p>${element.fecha}</p></div>`
+    })
+    return html
   }
   
 }

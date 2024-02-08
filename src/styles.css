@@ -7,3 +7,13 @@ body {
     padding-right: 50px;
     
 }
+
+.articulo{
+    padding: 10px;
+    max-width: 100%;
+    overflow: none;
+    background-color: rgba(206, 206, 206, 0.694);
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}

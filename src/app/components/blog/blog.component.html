@@ -20,12 +20,7 @@
             <button (click)="guardar()" class="boton">Guardar</button>
         </div>
         <div class="visor">
-            <div *ngFor="let element of arrFormulario" class="articulo">
-              <p class="ficha">{{ element.titulo }}</p>
-              <p class="ficha">{{ element.imagen }}</p>
-              <p class="ficha">{{ element.texto }}</p>
-              <p class="ficha">{{ element.fecha }}</p>
-            </div>
+            <div [innerHTML]="cargarDatos()"> <!-- Pintar Datos--></div>
           </div>
     </section>
 </div>
